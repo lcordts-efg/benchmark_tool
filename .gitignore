@@ -1,0 +1,31 @@
+# --- SECURITY ---
+# Prevents sensitive files from being leaked to GitHub
+credentials.json
+config/credentials.json
+.env
+*.pem
+*.key
+
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# --- VIRTUAL ENVIRONMENTS ---
+# Local dependencies should not be in the repo
+.venv/
+venv/
+env/
+
+# --- PYINSTALLER ---
+# Temporary build folders and generated files
+build/
+dist/
+*.spec
+
+# --- SYSTEM & IDE ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

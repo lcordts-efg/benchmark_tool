@@ -1,0 +1,5 @@
+Timestamp,Hostname,GPU,CPU,RAM,Application,Score1,Score2,Score3
+2026-04-20 11:37:21,wu-image-1-0-7,NVIDIA GeForce RTX 5080,Intel(R) Core(TM) Ultra 9 285K,31 GB,3DMark Steel Nomad,8568,N/A,N/A
+2026-04-20 11:44:36,wu-image-1-0-7,NVIDIA GeForce RTX 5080,Intel(R) Core(TM) Ultra 9 285K,31 GB,3DMark Time Spy Extreme,12963,GPU: 15902,CPU: 6333
+2026-04-20 11:48:55,wu-image-1-0-7,NVIDIA GeForce RTX 5080,Intel(R) Core(TM) Ultra 9 285K,31 GB,Cyberpunk 2077,192.9,124.0,N/A
+2026-04-20 11:57:30,wu-image-1-0-7,NVIDIA GeForce RTX 5080,Intel(R) Core(TM) Ultra 9 285K,31 GB,Cyberpunk 2077,191.5,120.6,N/A

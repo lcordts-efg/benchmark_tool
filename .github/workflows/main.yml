@@ -1,0 +1,31 @@
+name: Build EXE
+
+on:
+  workflow_dispatch: # Damit kannst du den Bau-Prozess manuell per Klick starten
+
+jobs:
+  build:
+    runs-on: windows-latest # Wir brauchen zwingend einen Windows-Server für eine .exe
+
+    steps:
+    - name: Code herunterladen
+      uses: actions/checkout@v4
+
+    - name: Python einrichten
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Bibliotheken & PyInstaller installieren
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller pyautogui opencv-python gspread oauth2client pyperclip
+
+    - name: EXE kompilieren
+      run: pyinstaller --onefile main.py
+
+    - name: EXE als Download bereitstellen
+      uses: actions/upload-artifact@v4
+      with:
+        name: Benchmark-Tool
+        path: dist/main.exe

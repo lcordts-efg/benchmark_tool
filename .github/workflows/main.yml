@@ -22,7 +22,7 @@ jobs:
         pip install pyinstaller pyautogui opencv-python gspread oauth2client pyperclip
 
     - name: EXE kompilieren
-      run: pyinstaller --onefile main.py
+      run: pyinstaller --onefile --collect-submodules=modules main.py
 
     - name: EXE als Download bereitstellen
       uses: actions/upload-artifact@v4

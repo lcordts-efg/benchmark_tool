@@ -7,8 +7,8 @@ import zipfile
 import re
 import subprocess
 import logging
-from modules.vision import click_image
-from modules import googlecloud
+from .vision import click_image
+from . import googlecloud
 
 
 def wait_for_new_file(directory: str, extension: str, start_time: float, timeout_sec: int) -> str:

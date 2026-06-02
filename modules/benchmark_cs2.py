@@ -6,8 +6,8 @@ import re
 import subprocess
 import logging
 # pyperclip removed — clipboard hacks replaced by log file parsing via -condebug.
-from modules.vision import click_image
-from modules import googlecloud
+from .vision import click_image
+from . import googlecloud
 
 
 def wait_for_log_entry(log_file_path: str, search_string: str, timeout_sec: int = 180) -> bool:

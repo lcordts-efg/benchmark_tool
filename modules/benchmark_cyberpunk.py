@@ -6,8 +6,8 @@ import json
 import glob
 import subprocess
 import logging
-from modules.vision import click_image
-from modules import googlecloud
+from .vision import click_image
+from . import googlecloud
 
 
 def abort_cyberpunk(msg: str):

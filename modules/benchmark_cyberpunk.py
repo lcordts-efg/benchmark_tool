@@ -234,10 +234,18 @@ def run_cyberpunk():
             game_key_press('3', hold_time=0.2)
             time.sleep(0.8)
 
+        logging.info("Locating and focusing 'Quick Preset' row...")
+        if not click_image('data/cp_quick_preset.png', timeout=10):
+            return abort_cyberpunk("Could not find 'Quick Preset' option on the Graphics screen.")
+        time.sleep(1)
+
+        # Park the cursor again so it doesn't block the Ultra text recognition
+        pyautogui.moveTo(1900, 1000, duration=0.5)
+        time.sleep(1)
+
         # Cycle through presets using 'D' until the Ultra preset reference image is matched.
         # Up to 10 presses are attempted before the routine is aborted.
-        logging.info("Cycling graphics presets until 'Ultra' is confirmed on screen...")
-        ultra_found = False
+        logging.info("Cycling graphics presets until 'Ultra' is confirmed on screen...")        ultra_found = False
         for _ in range(10):
             try:
                 if pyautogui.locateOnScreen('data/cp_ultra.png', confidence=0.9):
